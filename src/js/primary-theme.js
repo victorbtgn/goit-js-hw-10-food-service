@@ -8,7 +8,10 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
-if (localStorage.getItem('Theme') === null) {
+if (
+  localStorage.getItem('Theme') === null ||
+  localStorage.getItem('Theme') === Theme.LIGHT
+) {
   bodyRef.classList.add(Theme.LIGHT);
 }
 
